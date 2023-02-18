@@ -1,0 +1,18 @@
+{% extends 'book_outlet/base.html' %}
+
+{% block title %}
+    {{ name }}
+{% endblock title %}
+
+{% block content %}
+    <h1>Title: {{ name }} Rating: {{ rating }}</h1>
+    <hr>
+    <h2>By: {{ author }}</h2>
+    <p>Released: {{ release }} 
+        {% if bs %}
+            is best selling book in the USA.
+        {% else %}
+            is not a best seller.
+        {% endif %}
+    </p>
+{% endblock content %}
